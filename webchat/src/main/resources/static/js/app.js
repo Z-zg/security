@@ -1,4 +1,4 @@
-var stompClient=null
+var stompClient=null;
 function setConnected(connected) {
     $("#connect").prop("disabled",connected);
     $("#disconnect").prop("disabled",!connected);
@@ -39,9 +39,11 @@ function showGreeting(message) {
     $("#greetings").append("<div>"+message.name+":"+message.content+"</div>");
 }
 $(function () {
+    // language=JQuery-CSS
     $("#connect").click(function () {
         connect();
     });
+    // language=JQuery-CSS
     $("#disconnect").click(function () {
         disconnect();
     });

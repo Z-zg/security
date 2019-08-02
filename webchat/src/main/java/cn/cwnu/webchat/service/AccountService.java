@@ -12,9 +12,16 @@ public class AccountService {
     @Autowired
     AccountMapper accountMapper;
     public Account getAccountByAccount(String account){
-        return this.accountMapper.selectOneByExample(account);
+        Account account1=new Account();
+        account1.setAccount(account);
+        return this.accountMapper.selectOne(account1);
     }
     public List<Account> getAll(){
         return this.accountMapper.selectAll();
+    }
+    public Account getAccountByPhone(String phone){
+        Account account=new Account();
+        account.setPhone(phone);
+        return this.accountMapper.selectOne(account);
     }
 }

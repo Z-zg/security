@@ -1,0 +1,14 @@
+file-service:
+  # 文件路径
+  profile: D:/profile/
+server:
+  port: 80
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://zhao1998.mysql.rds.aliyuncs.com:3306/test?useUnicode=true&characterEncoding=UTF-8&userSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: Zhao1998!
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

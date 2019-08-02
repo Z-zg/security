@@ -9,9 +9,9 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class GreetingController {
     @MessageMapping("/hello")
-    @SendTo("topic/greetings")
+    @SendTo("/topic/greetings")
     public Message greeting(Message message) throws  Exception{
+        System.out.println(message);
         return message;
     }
-
 }
